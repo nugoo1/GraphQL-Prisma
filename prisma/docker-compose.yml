@@ -20,3 +20,33 @@ services:
             user: epmtcuwutltllu
             password: f486c81b90a3734d783ead1774f1811e31332c488253ff8638e871eb015b3109
             migrations: true
+
+# version: '3'
+# services:
+#   prisma:
+#     image: prismagraphql/prisma:1.19
+#     restart: always
+#     ports:
+#     - "4466:4466"
+#     environment:
+#       PRISMA_CONFIG: |
+#         port: 4466
+#         managementApiSecret: mysecret42
+#         databases:
+#           default:
+#             connector: postgres
+#             host: host.docker.internal
+#             port: 5432
+#             user: prisma
+#             password: prisma
+#             migrations: true
+#   postgres-db:
+#     image: postgres
+#     restart: always
+#     environment:
+#       POSTGRES_USER: prisma
+#       POSTGRES_PASSWORD: prisma
+#     volumes:
+#       - postgres:/var/lib/postgresql/data
+# volumes:
+#   postgres: ~
